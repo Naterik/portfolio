@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import "tailwindcss";
+
+html,
+body {
+  width: 100vw;
+  background-color: #121212;
+  color: #ffff;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+@utility container {
+  padding-inline: 10px;
+  margin-inline: auto;
+
+  @variant sm {
+    padding-inline: 20px;
+  }
+
+  @variant lg {
+    padding-inline: 80px;
+  }
+
+  @variant xl {
+    padding-inline: 120px;
+  }
+}
+
+@theme {
+  --color-white-50: gray;
+  --color-primary: purple;
+  --color-secondary: #c9a0dc;
+  --color-third: #c8a2c8;
+  --font-about: "Lobster", sans-serif;
+}
+
+@layer components {
+  .separate-section {
+    @apply container flex justify-between ring-1;
+  }
+  .round-button {
+    @apply rounded-l-full rounded-r-full px-5 py-2 text-center;
+  }
+  .gradient {
+    @apply bg-gradient-to-r from-purple-500 to-cyan-400;
+  }
+
+  .skill {
+    @apply rounded-lg size-40 flex justify-center items-center gap-1 flex-col inset-shadow-sm inset-shadow-indigo-500/40
+      transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:ring-3 ring-primary;
+  }
+}
+@layer utilities {
+  /* Keyframes trượt vô hạn: dịch -50% vì đã nhân đôi mảng */
+  @keyframes infinite-slider {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Áp animation vào track */
+  .animate-infinite-slider {
+    animation: infinite-slider 18s linear infinite;
+    will-change: transform;
+  }
+
+  /* Kích thước 1 item như mẫu */
+  .slide {
+    width: 125px; /* khớp với w-[125px] trong JSX để loop mượt */
+  }
+}
