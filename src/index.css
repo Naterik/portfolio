@@ -5,10 +5,100 @@
 html,
 body {
   width: 100vw;
-  background-color: #121212;
-  color: #ffff;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+}
+
+@theme {
+  /* Light mode colors */
+  --color-white-50: #6b7280;
+  --color-primary: #8b5cf6;
+  --color-secondary: #c9a0dc;
+  --color-third: #c8a2c8;
+
+  /* Dark mode colors */
+  --color-dark-bg: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-card: #334155;
+  --color-dark-text: #f1f5f9;
+  --color-dark-text-secondary: #cbd5e1;
+  --color-dark-border: #475569;
+  --color-dark-primary: #a78bfa;
+  --color-dark-secondary: #e879f9;
+
+  /* Background colors */
+  --color-bg-light: #ffffff;
+  --color-bg-dark: var(--color-dark-bg);
+  --color-surface-light: #f8fafc;
+  --color-surface-dark: var(--color-dark-surface);
+  --color-card-light: #ffffff;
+  --color-card-dark: var(--color-dark-card);
+
+  /* Text colors */
+  --color-text-light: #1e293b;
+  --color-text-dark: var(--color-dark-text);
+  --color-text-secondary-light: #64748b;
+  --color-text-secondary-dark: var(--color-dark-text-secondary);
+
+  /* Border colors */
+  --color-border-light: #e2e8f0;
+  --color-border-dark: var(--color-dark-border);
+
+  --font-about: "Lobster", sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee2: marquee2 40s linear infinite;
+}
+
+/* Dark mode utility classes */
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-card: var(--color-card-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+  --color-border: var(--color-border-dark);
+  --color-primary-theme: var(--color-dark-primary);
+  --color-secondary-theme: var(--color-dark-secondary);
+
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.light {
+  --color-bg: var(--color-bg-light);
+  --color-surface: var(--color-surface-light);
+  --color-card: var(--color-card-light);
+  --color-text: var(--color-text-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+  --color-border: var(--color-border-light);
+  --color-primary-theme: var(--color-primary);
+  --color-secondary-theme: var(--color-secondary);
+
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+.animate-paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50.4%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @utility container {
@@ -28,46 +118,90 @@ body {
   }
 }
 
-@theme {
-  --color-white-50: gray;
-  --color-primary: purple;
-  --color-secondary: #c9a0dc;
-  --color-third: #c8a2c8;
-  --font-about: "Lobster", sans-serif;
-}
-
 @layer components {
   .separate-section {
-    @apply container flex justify-between ring-1;
+    @apply container flex justify-between;
   }
+
   .round-button {
     @apply rounded-l-full rounded-r-full px-5 py-2 text-center;
   }
+
   .gradient {
     @apply bg-gradient-to-r from-purple-500 to-cyan-400;
   }
 
+  .dark .gradient {
+    @apply bg-gradient-to-r from-purple-400 to-cyan-300;
+  }
+
   .skill {
-    @apply rounded-lg size-40 flex justify-center items-center gap-1 flex-col inset-shadow-sm inset-shadow-indigo-500/40
-      transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:ring-3 ring-primary;
-  }
-}
-@layer utilities {
-  /* Keyframes trượt vô hạn: dịch -50% vì đã nhân đôi mảng */
-  @keyframes infinite-slider {
-    to {
-      transform: translateX(-50%);
-    }
+    @apply rounded-lg size-40 flex justify-center items-center gap-1 flex-col 
+      transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:ring-3;
+
+    /* Light mode styles */
+    @apply bg-white shadow-lg border border-gray-200 ring-purple-500;
   }
 
-  /* Áp animation vào track */
-  .animate-infinite-slider {
-    animation: infinite-slider 18s linear infinite;
-    will-change: transform;
+  .dark .skill {
+    /* Dark mode styles */
+    @apply bg-slate-700 border-slate-600 shadow-2xl;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5),
+      0 4px 6px -2px rgba(0, 0, 0, 0.3);
   }
 
-  /* Kích thước 1 item như mẫu */
-  .slide {
-    width: 125px; /* khớp với w-[125px] trong JSX để loop mượt */
+  /* Theme-aware card styles */
+  .theme-card {
+    @apply transition-all duration-300 ease-in-out;
+    background-color: var(--color-card);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  /* Theme-aware text styles */
+  .theme-text {
+    color: var(--color-text);
+  }
+
+  .theme-text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  /* Theme-aware border styles */
+  .theme-border {
+    border-color: var(--color-border);
+  }
+
+  /* Dark mode specific shadow styles */
+  .dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5),
+      0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6),
+      0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Code block styling for dark mode */
+  .code-block {
+    @apply rounded-xl ring-2 transition-all duration-300;
+  }
+
+  .light .code-block {
+    @apply ring-purple-200 bg-gray-50;
+  }
+
+  .dark .code-block {
+    @apply ring-slate-600 bg-slate-800;
+  }
+
+  /* Button hover effects for dark mode */
+  .dark .hover\\:text-white-50:hover {
+    color: #cbd5e1;
+  }
+
+  .dark .hover\\:bg-gray-300:hover {
+    @apply hover:bg-slate-600;
   }
 }

@@ -4,7 +4,6 @@ const MySkill = [
   { name: "JavaScript", icon: "/icon_skill/javascript-original.svg" },
   { name: "TypeScript", icon: "/icon_skill/typescript-original.svg" },
   { name: "React", icon: "/icon_skill/react-original.svg" },
-
   { name: "Express", icon: "/icon_skill/express-original.svg" },
   { name: "MongoDB", icon: "/icon_skill/mongodb-original.svg" },
   { name: "Tailwind", icon: "/icon_skill/Tailwind_CSS_Logo.svg" },
@@ -16,4 +15,27 @@ const MySkill = [
   { name: "Redux", icon: "/icon_skill/redux-original.svg" },
 ];
 
-export { MySkill };
+const Projects = [
+  {
+    git: "https://github.com/Naterik/risk_frontend/tree/main",
+    name: "projects.risk.name",
+    time: "projects.risk.time",
+    description: "projects.risk.desc"
+  },
+  {
+    git: "https://github.com/Naterik/Quiz-application",
+    name: "projects.quiz.name",
+    time: "projects.quiz.time",
+    description: "projects.quiz.desc"
+  },
+  {
+    git: "https://github.com/Naterik/mealstogo-app",
+    name: "projects.meals.name",
+    time: "projects.meals.time",
+    description: "projects.meals.desc"
+  }
+];
+
+
+
+export { MySkill ,Projects};

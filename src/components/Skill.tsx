@@ -1,21 +1,31 @@
-import React from 'react'
-import { MySkill } from '../data'
-
+import React, { useState } from "react";
+import { MySkill } from "../data";
+import { useTranslation } from 'react-i18next';
 const Skill = () => {
-    
+  const [isPaused,setIsPaused]=useState(false);
+  const {t}=useTranslation();
   return (
     <div>
-      <h1 className='text-center w-full text-3xl py-4'>Skills</h1>
-    
-    <div className='py-4 ' >
-      <div className='skill '>
-        <img className='size-20 pb-2' src='public/icon_skill/react-original.svg'/>
-        <div className='text-xl  hover:text-primary'>React</div>
+      <h1 className="text-center w-full text-3xl py-4">{t('skills')}</h1>
+      <div className="relative flex overflow-x-hidden will-change: transform"                 
+                onMouseEnter={()=>setIsPaused(true)}
+                onMouseLeave={()=> setIsPaused(false)}>
+        <div className={` py-12   whitespace-nowrap flex gap-14 animate-marquee ${isPaused ?"animate-paused":""} `}>
+          {[...MySkill,...MySkill].map((skill, index) => {
+            return (
+              <div
+                className="skill shrink-0"
+                key={index}
+              >
+                <img className="size-20 pb-2" src={skill.icon} />
+                <div className="text-xl  hover:text-primary">{skill.name}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
-    
-    </div>
-  )
-}
+  );
+};
 
-export default Skill
+export default Skill;

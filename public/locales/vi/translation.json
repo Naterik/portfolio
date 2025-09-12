@@ -1,0 +1,63 @@
+{
+  "about": "Về tôi",
+  "project": "Dự án",
+  "contact": "Liên hệ",
+
+  
+  "hero_greeting": "Xin chào 👋",
+  "hero_im": "Tôi là",
+  "hero_resume": "Tải CV",
+  "hero_roles": {
+    "intern": "Thực tập sinh",
+    "frontend": "Lập trình viên Front-end",
+    "fullstack": "Lập trình viên Fullstack"
+  },
+
+
+
+  "intro_let_me": "Hãy để tôi",
+  "intro_introduce": "giới thiệu",
+  "intro_myself": "bản thân :",
+
+  "intro_p1": "Tôi là sinh viên năm cuối ngành Kỹ thuật Phần mềm, yêu thích lập trình",
+  "intro_p2_before": "Tôi xây dựng web với",
+  "intro_p2_after": "cũng làm việc với",
+  "intro_p3": "Tôi hứng thú với việc xây dựng sản phẩm và muốn khám phá những điều bí ẩn trong cuộc sống hằng ngày",
+  "intro_p4_prefix": "Kỷ luật, ham học hỏi,",
+  "intro_p4_suffix": "tuân theo quy trình của bạn và hoàn thành đúng hạn.",
+
+   "contact_title": "Liên hệ",
+  "contact_lead": "Hãy liên hệ để trao đổi về cơ hội thực tập!",
+  "contact_sublead": "Tôi sẵn sàng học hỏi, phát triển và đón nhận thử thách mới — rất mong nhận được phản hồi từ bạn!",
+  "contact_email_label": "Email",
+  "contact_phone_label": "Điện thoại",
+  "contact_location_label": "Địa điểm",
+  "contact_location_value": "Hà Nội, Việt Nam",
+
+  
+  "projects_title": "Dự án cá nhân",
+  "projects": {
+    "risk": {
+      "name": "Risk Assessment",
+      "time": "02/2025 - 05/2025",
+      "desc": "Công cụ báo cáo rủi ro nội bộ cho dự án thực tập: Form báo cáo động, bảng/đồ thị tổng quan, xác thực bằng token, lọc theo danh mục và đếm rủi ro theo thời gian."
+    },
+    "quiz": {
+      "name": "Ứng dụng Quiz",
+      "time": "06/2025 - 07/2025",
+      "desc": "Nền tảng trắc nghiệm có đăng nhập và luồng quản trị câu hỏi/bài thi. Dùng Redux cho state toàn cục và bảo vệ dữ liệu người dùng sau đăng nhập."
+    },
+    "meals": {
+      "name": "MealsToGo (React Native)",
+      "time": "07/2025 - 08/2025",
+      "desc": "Ứng dụng tìm món và đặt đồ ăn. Tích hợp thanh toán Stripe, định vị thời gian thực (Google Cloud + Firebase) và ảnh đại diện bằng camera."
+    }
+  },
+
+  "skills":"Công nghệ sử dụng",
+
+
+  "about_me": "Giới thiệu",
+
+  "footer_text": "Bản quyền © 2025 Lư Tiến Khương • Được xây dựng với ❤️ tại Việt Nam"
+}

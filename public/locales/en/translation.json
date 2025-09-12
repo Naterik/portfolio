@@ -1,0 +1,59 @@
+{
+  "about": "About",
+  "project": "Project",
+  "contact": "Contact",
+
+  "intro_let_me": "Let me",
+  "intro_introduce": "introduce",
+  "intro_myself": "myself :",
+
+  "hero_greeting": "Hi, There 👋",
+  "hero_im": "I'm",
+  "hero_resume": "Resume",
+  "hero_roles": {
+    "intern": "Intern-ship",
+    "frontend": "Front-end developer",
+    "fullstack": "Fullstack developer"
+  },
+
+  "intro_p1": "I’m a final-year Software Engineering student who loves coding",
+  "intro_p2_before": "I build web with",
+  "intro_p2_after": "also work with",
+  "intro_p3": "I'm feel interest with building thing and want to understand the mystery around the daily life",
+  "intro_p4_prefix": "Disciplined, curious,",
+  "intro_p4_suffix": "follow your process, and deliver on time.",
+
+   "contact_title": "Contact",
+  "contact_lead": "Get in touch about an internship opportunity!",
+  "contact_sublead": "I'm ready to learn, grow, and take on new challenges, can't wait to hear from you!",
+  "contact_email_label": "Email",
+  "contact_phone_label": "Phone",
+  "contact_location_label": "Location",
+  "contact_location_value": "Hanoi, Vietnam",
+
+  "projects_title": "Personal project",
+  "projects": {
+    "risk": {
+      "name": "Risk Assessment",
+      "time": "Feb 2025 - May 2025",
+      "desc": "Internal risk reporting tool for an internship project: Delivered dynamic report forms, table/dashboard views, secure token-based auth, and precise category search/filter with time-based risk counts."
+    },
+    "quiz": {
+      "name": "Quiz Application",
+      "time": "Jun 2025 - Jul 2025",
+      "desc": "Web quiz platform with authentication and an admin flow to manage quizzes/questions. Implemented Redux for global state and secure user data handling after login."
+    },
+    "meals": {
+      "name": "MealsToGo (React Native)",
+      "time": "Jul 2025 - Aug 2025",
+      "desc": "Mobile app to discover/order meals. Implemented in-app payments with Stripe, real-time location (Google Cloud + Firebase), and profile personalization with camera-based avatar capture."
+    }
+  },
+
+  "skills":"Skills",
+
+  "about_me": "About me",
+
+  "footer_text": "Copyright © 2025 Lu Tien Khuong • Built with ❤️ in Vietnam"
+
+}

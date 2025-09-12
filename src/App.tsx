@@ -5,13 +5,17 @@ import Project from "./components/Project";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { useState } from "react";
+
 
 function App() {
+  const [isDark, setIsDark] = useState<boolean>(false);
+  console.log('isdark :>> ', isDark);
   return (
     <>
-      <div>
+      <div className={isDark ?"":"dark"}>
         <header className="separate-section  ">
-          <Header />
+          <Header isDark={isDark} setIsDark={setIsDark}/>
         </header>
         <section className="container ">
           <Hero />

@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
-    <div className='text-center mt-5'>Bản quyền © 2025 Lu Tien Khuong • Được xây dựng với ❤️ tại Việt Nam</div>
+    <div className='text-center mt-5'>{t('footer_text')}</div>
   )
 }
 
