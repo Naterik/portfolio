@@ -19,19 +19,21 @@ const Project = () => {
   };
 
   return (
-    <div className='py-4'>
+    <section className='py-4' id='project'>
       <div className='text-center text-3xl mb-7'>{t('projects_title')}</div>
 
-      <div className='flex justify-around'>
-        <div className='size-125'>
+      <div className='grid grid-cols-1 md:flex justify-around  auto-rows-fr'>
+        
+        <picture  className=''>
+          <source className='size-160'/>
           <Lottie {...defaultOptions} />
-        </div>
+        </picture>
 
         <div className='flex flex-col space-y-7 '>
           {Projects.map((project, index) => {
             return (
               <a href={project.git} key={index} target="_blank">
-                <div className='ring-1 w-120 px-3 rounded-lg'>
+                <div className='ring-1 md:max-w-xs xl:max-w-md px-3 rounded-lg'>
                   <p className='py-3 text-center'>{t(project.time)}</p>
                   <div className='flex my-3 items-center'>
                     <div className='mx-3 flex items-center'>
@@ -48,7 +50,7 @@ const Project = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

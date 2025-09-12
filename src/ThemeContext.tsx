@@ -1,7 +1,4 @@
-// contexts/ThemeContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
-// Định nghĩa interface cho context value
 interface ThemeContextType {
   isDark: boolean;
   setIsDark: (value: boolean) => void;
@@ -9,7 +6,6 @@ interface ThemeContextType {
   theme: 'light' | 'dark';
 }
 
-// Tạo context với default value
 const ThemeContext = createContext<ThemeContextType>({
   isDark: false,
   setIsDark: () => {},
@@ -27,12 +23,12 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }:any) => {
   const [isDark, setIsDark] = useState(() => {
-    // Check if there's a saved theme preference in localStorage
+
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       return savedTheme === 'dark';
     }
-    // Default to system preference
+  
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 

@@ -6,13 +6,13 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='py-4'>
+    <div className='py-4' id="contact">
       <h1 className='text-3xl text-center mx-auto mb-3'>{t('contact_title')}</h1>
       <p className='text-center mx-auto tracking-wider mb-5'>
         {t('contact_lead')}<br/>{t('contact_sublead')}
       </p>
   
-      <div className='grid grid-cols-3 justify-items-center '>
+      <div className='grid auto-cols-auto space-y-4  md:grid-cols-3  justify-items-center  '>
         <div className='text-center'>
           <Mail className='size-7 mx-auto'/>
           <p className='text-lg'>{t('contact_email_label')}</p>

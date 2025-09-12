@@ -11,7 +11,7 @@ body {
 
 @theme {
   /* Light mode colors */
-  --color-white-50: #6b7280;
+  --color-white-50: gray;
   --color-primary: #8b5cf6;
   --color-secondary: #c9a0dc;
   --color-third: #c8a2c8;
@@ -35,7 +35,7 @@ body {
   --color-card-dark: var(--color-dark-card);
 
   /* Text colors */
-  --color-text-light: #1e293b;
+  --color-text-light: #242424;
   --color-text-dark: var(--color-dark-text);
   --color-text-secondary-light: #64748b;
   --color-text-secondary-dark: var(--color-dark-text-secondary);
@@ -102,15 +102,15 @@ body {
 }
 
 @utility container {
-  padding-inline: 10px;
+  padding-inline: 100px;
   margin-inline: auto;
 
   @variant sm {
-    padding-inline: 20px;
+    padding-inline: 100px;
   }
 
   @variant lg {
-    padding-inline: 80px;
+    padding-inline: 120px;
   }
 
   @variant xl {
