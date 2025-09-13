@@ -3,7 +3,6 @@
   "project": "Dự án",
   "contact": "Liên hệ",
 
-  
   "hero_greeting": "Xin chào 👋",
   "hero_im": "Tôi là",
   "hero_resume": "Tải CV",
@@ -12,8 +11,6 @@
     "frontend": "Lập trình viên Front-end",
     "fullstack": "Lập trình viên Fullstack"
   },
-
-
 
   "intro_let_me": "Hãy để tôi",
   "intro_introduce": "giới thiệu",
@@ -26,7 +23,7 @@
   "intro_p4_prefix": "Kỷ luật, ham học hỏi,",
   "intro_p4_suffix": "tuân theo quy trình của bạn và hoàn thành đúng hạn.",
 
-   "contact_title": "Liên hệ",
+  "contact_title": "Liên hệ",
   "contact_lead": "Hãy liên hệ để trao đổi về cơ hội thực tập!",
   "contact_sublead": "Tôi sẵn sàng học hỏi, phát triển và đón nhận thử thách mới — rất mong nhận được phản hồi từ bạn!",
   "contact_email_label": "Email",
@@ -34,7 +31,6 @@
   "contact_location_label": "Địa điểm",
   "contact_location_value": "Hà Nội, Việt Nam",
 
-  
   "projects_title": "Dự án cá nhân",
   "projects": {
     "risk": {
@@ -54,8 +50,7 @@
     }
   },
 
-  "skills":"Công nghệ sử dụng",
-
+  "skills": "Công nghệ sử dụng",
 
   "about_me": "Giới thiệu",
 
